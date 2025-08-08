@@ -1,0 +1,21 @@
+# Virtual Environment
+/venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter Notebook Checkpoints
+.ipynb_checkpoints/
+
+# Data files - To avoid uploading large datasets
+data/train.ft.txt
+data/test.ft.txt
+data/processed_reviews.csv
+
+# Model files - To avoid uploading large model artifacts
+/models/
+
+# VS Code settings
+.vscode/
