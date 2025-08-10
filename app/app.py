@@ -5,6 +5,7 @@ import sys
 from pathlib import Path
 from transformers import pipeline
 from scipy.sparse import hstack
+from huggingface_hub import hf_hub_download
 
 # Add the parent directory to the system path to allow imports from the 'utils' folder
 sys.path.append(str(Path(__file__).resolve().parent.parent))
@@ -23,6 +24,32 @@ st.set_page_config(
 @st.cache_resource
 def load_models():
     """Load all models and vectorizers."""
+
+    # --- For Deployment on Streamlit Cloud ---
+    # This code downloads models from Hugging Face Hub.
+    try:
+        # Define your Hugging Face repository ID
+        repo_id = "SaiKarthik333/product-review-analysis-fake-review-detection"
+
+        # Download the model and vectorizer from the Hub
+        model_path = hf_hub_download(repo_id=repo_id, filename="fake_review_model.pkl")
+        vectorizer_path = hf_hub_download(repo_id=repo_id, filename="tfidf_vectorizer.pkl")
+        
+        # Load the models into memory
+        sentiment_analyzer = pipeline("sentiment-analysis", model="distilbert-base-uncased-finetuned-sst-2-english", framework="tf")
+        fake_detector = joblib.load(model_path)
+        tfidf_vectorizer = joblib.load(vectorizer_path)
+        
+        return sentiment_analyzer, fake_detector, tfidf_vectorizer
+
+    except Exception as e:
+        st.error(f"Error loading models from Hugging Face Hub: {e}")
+        return None, None, None
+
+    
+    # --- For Local Development ---
+    # The following code loads models from local files. It is commented out for deployment.
+    """
     model_path = Path(__file__).resolve().parent.parent / "models/fake_review_model.pkl"
     vectorizer_path = Path(__file__).resolve().parent.parent / "models/tfidf_vectorizer.pkl"
     
@@ -35,6 +62,7 @@ def load_models():
     tfidf_vectorizer = joblib.load(vectorizer_path)
     
     return sentiment_analyzer, fake_detector, tfidf_vectorizer
+    """
 
 # --- Load Models ---
 sentiment_analyzer, fake_detector, tfidf_vectorizer = load_models()
