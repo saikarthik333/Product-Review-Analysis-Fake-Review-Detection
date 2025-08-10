@@ -11,14 +11,13 @@ An end-to-end data science application that performs real-time sentiment analysi
 ---
 
 ## 📖 Table of Contents
-- [Overview](#-overview)
-- [Features](#-features)
-- [Tech-Stack](#-tech-stack)
-- [Project Workflow](#-project-workflow)
-- [Model Iteration and Improvement](#-model-iteration-and-improvement)
-- [How to Run](#-how-to-run)
-- [Challenges and Learnings](#-challenges-and-learnings)
-- [Contact](#-contact)
+* [Overview](#-overview)
+* [Features](#-features)
+* [Tech-Stack](#-tech-stack)
+* [Project-Workflow](#-project-workflow)
+* [How-to-Run](#-how-to-run)
+* [Model-Iteration-Deployment-Strategy](#-model-iteration--deployment-strategy)
+* [Contact](#-contact)
 
 ---
 
@@ -192,3 +191,10 @@ A key part of this project was not just building a model, but improving it and s
 * **The Initial Plan**: For deployment, my first approach was to use **Git LFS** to handle the large model files (`.pkl`) that needed to be on GitHub for Streamlit Cloud to access.
 * **The Problem**: During the deployment process, the repeated cloning of the repository quickly exhausted the **free 1GB monthly bandwidth** provided by GitHub for Git LFS. This caused the deployment to fail.
 * **The Solution**: To solve this, I re-architected the deployment strategy. I uploaded the final XGBoost model and TF-IDF vectorizer to **Hugging Face Hub**, a platform designed specifically for hosting model artifacts. I then modified the Streamlit application (`app.py`) to download these models directly from my Hugging Face repository (`SaiKarthik333/product-review-analysis-fake-review-detection`) when the app starts. This is the standard, professional method for deploying ML apps as it keeps the GitHub repository small and bypasses LFS bandwidth limits.
+
+---
+## 📫 Contact
+
+* **Name**: Motapothula Sai Karthik
+* **LinkedIn**: [linkedin.com/in/saikarthik3-33](https://www.linkedin.com/in/saikarthik333)
+* **GitHub**: [github.com/saikarthik333](https://github.com/saikarthik333)
