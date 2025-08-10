@@ -31,11 +31,11 @@ The project started with the raw Amazon Reviews dataset, which contained million
 
 3. **Creating a Balanced Dataset**: The raw data contained very few short reviews. To prevent model bias, I created a balanced dataset by sampling an equal number of "fake" and "genuine" reviews.
 
-    ![Balancing Image](your_balancing_image_link_here.png)
+    
 
     This process resulted in a clean, balanced `processed_reviews.csv` file ready for model training.
 
-    ![Dataframe Image](your_dataframe_image_link_here.png)
+    <img width="1196" height="257" alt="Image" src="https://github.com/user-attachments/assets/c49e0219-835e-4bbb-b22b-31f4791a9893" />
 
 ### 2. Model Development and Improvement
 
@@ -51,14 +51,14 @@ The improved XGBoost model was evaluated on both a validation set (a split from 
 **Validation Performance:**
 The model showed excellent performance on the validation set, achieving **99% accuracy** and demonstrating that it learned the patterns in the training data effectively.
 
-![Validation Report](your_validation_report_link_here.png)
-![Validation Matrix](your_validation_matrix_link_here.png)
+<img width="598" height="273" alt="Image" src="https://github.com/user-attachments/assets/2a8981c2-4bf6-4114-b18c-ddafcffce5b8" />
+<img width="670" height="607" alt="Image" src="https://github.com/user-attachments/assets/3cbbca0e-edd8-4127-b09a-08a8863a5bbe" />
 
 **Final Test Performance:**
 On the completely unseen test set of 400,000 reviews, the model's true performance was revealed.
 
-![Test Report](your_test_report_link_here.png)
-![Test Matrix](your_test_matrix_link_here.png)
+<img width="569" height="248" alt="Image" src="https://github.com/user-attachments/assets/3522bc16-2c50-4ce9-930f-b314fffa76c1" />
+<img width="702" height="597" alt="Image" src="https://github.com/user-attachments/assets/a25bb553-1a5c-4195-bcc9-3c3d29a3356f" />
 
 The key takeaways from the final evaluation are:
 
@@ -67,7 +67,7 @@ The key takeaways from the final evaluation are:
 
 After training, the final XGBoost model and TF-IDF vectorizer were saved for use in the application.
 
-![Saved Model](your_saved_model_image_link_here.png)
+<img width="612" height="89" alt="Image" src="https://github.com/user-attachments/assets/9dabe0a7-9644-4bab-9693-775942088b7d" />
 
 ---
 
