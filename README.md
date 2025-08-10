@@ -25,7 +25,7 @@ The project started with the raw Amazon Reviews dataset, which contained million
 
 1. **Parsing Large Files**: Successfully parsed 2,000,000 reviews from the raw `train.ft.txt` file.
 
-    ![Parsing Image](your_parsing_image_link_here.png)
+    <img width="657" height="71" alt="Image" src="https://github.com/user-attachments/assets/87772c6a-f0b0-4e45-b29b-8f7e7bf033df" />
 
 2. **Defining the Target Variable**: Since no "fake" label existed, I engineered a proxy: reviews with less than 15 words were labeled as potentially "fake" (1), and longer reviews were labeled "genuine" (0).
 
