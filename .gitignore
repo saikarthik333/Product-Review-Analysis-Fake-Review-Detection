@@ -15,7 +15,7 @@ data/test.ft.txt
 data/processed_reviews.csv
 
 # Model files - To avoid uploading large model artifacts
-/models/
+
 
 # VS Code settings
 .vscode/
