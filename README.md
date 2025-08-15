@@ -95,11 +95,6 @@ Of course. Here is the updated How to Run section for your README.md file.
 
 It now includes separate, clear instructions for running the app locally versus deploying it to the cloud. This explains the purpose of the two different model-loading methods in your app.py script.
 
-## How to Use
-Simply copy this updated section and replace the existing How to Run section in your README.md file on GitHub.
-
-Markdown
-
 ## ⚙️ How to Run
 
 This project is configured with two modes for loading the ML models: one for running locally on your machine and one optimized for deployment on platforms like Streamlit Community Cloud.
