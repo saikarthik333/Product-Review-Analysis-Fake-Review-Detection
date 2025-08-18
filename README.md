@@ -4,7 +4,7 @@
 ![Framework](https://img.shields.io/badge/Framework-Streamlit-red.svg)
 ![License](https://img.shields.io/badge/License-MIT-green.svg)
 
-An end-to-end data science application that performs real-time sentiment analysis and detects potentially fake or biased product reviews using NLP and Machine Learning, deployed in an interactive web app.
+It is a data science application that performs real-time sentiment analysis and detects potentially fake or biased product reviews using NLP and Machine Learning, deployed in an interactive web app.
 
 ![Live App Demo](your_gif_link_here.gif)
 
